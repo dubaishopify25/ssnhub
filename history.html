@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSN HUB — History</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #030704;
+            color: #d8ffe0;
+            font-family: "Courier New", monospace;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 230px;
+            padding: 25px 15px;
+
+            background: #050a06;
+            border-right: 1px solid #173d1d;
+        }
+
+        .logo {
+            color: #39ff70;
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 2px;
+
+            text-shadow:
+                0 0 12px rgba(57,255,112,.5);
+        }
+
+        .logo span {
+            color: #d8ffe0;
+        }
+
+        .logo small {
+            display: block;
+            margin-top: 5px;
+            color: #49664f;
+            font-size: 8px;
+        }
+
+        nav {
+            margin-top: 35px;
+        }
+
+        nav a {
+            display: block;
+            padding: 14px;
+            margin: 5px 0;
+
+            color: #64836b;
+            text-decoration: none;
+
+            border: 1px solid transparent;
+            font-size: 11px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #39ff70;
+            background: #071409;
+            border-color: #174d22;
+        }
+
+        main {
+            margin-left: 230px;
+            padding: 28px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .subtitle {
+            margin-top: 7px;
+            color: #55745c;
+            font-size: 9px;
+        }
+
+        .wallet {
+            padding: 10px 15px;
+            background: #071008;
+            border: 1px solid #173d1d;
+        }
+
+        .wallet small {
+            display: block;
+            color: #55745c;
+            font-size: 8px;
+        }
+
+        .wallet strong {
+            color: #39ff70;
+            font-size: 16px;
+        }
+
+        .terminal {
+            margin: 22px 0;
+            padding: 14px;
+
+            background: #050a06;
+            border: 1px solid #173d1d;
+
+            color: #55745c;
+            font-size: 9px;
+        }
+
+        .green {
+            color: #39ff70;
+        }
+
+        .history-box {
+            background: #071008;
+            border: 1px solid #173d1d;
+        }
+
+        .box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 16px;
+
+            border-bottom: 1px solid #173d1d;
+        }
+
+        .box-header h2 {
+            margin: 0;
+            font-size: 11px;
+        }
+
+        .demo-label {
+            color: #39ff70;
+            font-size: 8px;
+        }
+
+        .empty {
+            min-height: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+            gap: 12px;
+
+            color: #4f6d54;
+            font-size: 10px;
+        }
+
+        .empty-icon {
+            font-size: 35px;
+            color: #285d33;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+
+            padding: 11px 16px;
+
+            color: #39ff70;
+            text-decoration: none;
+
+            border: 1px solid #287337;
+            background: #071409;
+
+            font-size: 9px;
+        }
+
+        .back:hover {
+            border-color: #39ff70;
+            box-shadow: 0 0 15px rgba(57,255,112,.12);
+        }
+
+        @media(max-width:700px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+                border-right: 0;
+                border-bottom: 1px solid #173d1d;
+            }
+
+            nav {
+                margin-top: 20px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin-right: 4px;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 18px;
+            }
+
+            header {
+                gap: 15px;
+            }
+
+            .wallet {
+                min-width: 110px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            SSN<span>HUB</span>
+
+            <small>
+                TEST ENVIRONMENT
+            </small>
+
+        </div>
+
+
+        <nav>
+
+            <a href="dashboard.html">
+                ▣ Dashboard
+            </a>
+
+            <a href="dashboard.html">
+                ▣ Test Records
+            </a>
+
+            <a href="#">
+                $ Wallet
+            </a>
+
+            <a class="active" href="history.html">
+                ◷ History
+            </a>
+
+            <a href="#">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <header>
+
+            <div>
+
+                <h1>
+                    &gt; History
+                </h1>
+
+                <div class="subtitle">
+                    DEMO ACTIVITY LOG
+                </div>
+
+            </div>
+
+
+            <div class="wallet">
+
+                <small>
+                    WALLET
+                </small>
+
+                <strong>
+                    $250.00
+                </strong>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- TERMINAL -->
+
+        <div class="terminal">
+
+            <span class="green">
+                root@ssnhub
+            </span>:~$
+
+            history --status
+
+            &nbsp;&nbsp;
+
+            STATUS:
+
+            <span class="green">
+                READY
+            </span>
+
+        </div>
+
+
+
+        <!-- HISTORY -->
+
+        <section class="history-box">
+
+
+            <div class="box-header">
+
+                <h2>
+                    &gt; ACTIVITY HISTORY
+                </h2>
+
+                <span class="demo-label">
+                    DEMO ONLY
+                </span>
+
+            </div>
+
+
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    ◷
+                </div>
+
+                <div>
+                    NO DEMO ACTIVITY YET
+                </div>
+
+                <div>
+                    Your fictional test activity will appear here.
+                </div>
+
+                <a
+                    class="back"
+                    href="dashboard.html">
+
+                    ← BACK TO DASHBOARD
+
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</body>
+</html>
