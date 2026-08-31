@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSN HUB — Signup</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #030704;
+            color: #d8ffe0;
+            font-family: "Courier New", monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            width: 390px;
+            max-width: calc(100% - 30px);
+            padding: 35px;
+            background: #071008;
+            border: 1px solid #1b5124;
+            box-shadow: 0 0 40px rgba(57,255,112,.08);
+        }
+
+        .logo {
+            text-align: center;
+            color: #39ff70;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #d8ffe0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 16px;
+            margin: 30px 0 20px;
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #030704;
+            border: 1px solid #183b1d;
+            color: #d8ffe0;
+            font-family: inherit;
+            outline: none;
+        }
+
+        button,
+        .google {
+            width: 100%;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        button {
+            border: 1px solid #39ff70;
+            background: #071409;
+            color: #39ff70;
+        }
+
+        .google {
+            border: 1px solid #294c30;
+            color: #baffc7;
+            font-size: 10px;
+        }
+
+        .or {
+            text-align: center;
+            margin: 18px 0;
+            color: #527057;
+            font-size: 9px;
+        }
+
+        p {
+            text-align: center;
+            color: #527057;
+            font-size: 9px;
+        }
+
+        a {
+            color: #39ff70;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <div class="logo">
+        SSN<span>HUB</span>
+    </div>
+
+    <h1>&gt; CREATE ACCOUNT</h1>
+
+    <form onsubmit="return false">
+
+        <input type="text" placeholder="Username">
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Password">
+
+        <button type="button">
+            CREATE ACCOUNT
+        </button>
+
+    </form>
+
+    <div class="or">OR</div>
+
+    <a class="google" href="#">
+        CONTINUE WITH GOOGLE
+    </a>
+
+    <p>
+        Already registered?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+
+</body>
+</html>
