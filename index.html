@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSN HUB — Demo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #030704;
+            color: #d8ffe0;
+            font-family: "Courier New", monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+
+            background-image:
+                linear-gradient(
+                    rgba(57,255,112,.06) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(57,255,112,.06) 1px,
+                    transparent 1px
+                );
+
+            background-size: 40px 40px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            padding: 25px;
+        }
+
+        .panel {
+            background: rgba(5,12,6,.96);
+            border: 1px solid #174d22;
+            padding: 45px 35px;
+            text-align: center;
+
+            box-shadow:
+                0 0 40px rgba(57,255,112,.06),
+                inset 0 0 40px rgba(57,255,112,.02);
+        }
+
+        .logo {
+            color: #39ff70;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 3px;
+
+            text-shadow:
+                0 0 8px rgba(57,255,112,.7),
+                0 0 25px rgba(57,255,112,.3);
+        }
+
+        .logo span {
+            color: #d5ffdc;
+        }
+
+        .subtitle {
+            margin-top: 12px;
+            color: #55745c;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .terminal {
+            margin: 30px 0;
+            padding: 15px;
+            text-align: left;
+
+            background: #020603;
+            border: 1px solid #123919;
+
+            color: #66816c;
+            font-size: 11px;
+            line-height: 1.8;
+        }
+
+        .green {
+            color: #39ff70;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            padding: 14px;
+
+            border: 1px solid #287337;
+            color: #39ff70;
+            background: #071409;
+
+            font-size: 11px;
+            font-weight: bold;
+
+            transition: .2s;
+        }
+
+        .buttons a:hover {
+            background: #0b2110;
+            border-color: #39ff70;
+
+            box-shadow:
+                0 0 18px rgba(57,255,112,.15);
+        }
+
+        .notice {
+            margin-top: 25px;
+            padding: 11px;
+
+            border: 1px solid #17351b;
+            background: #050a06;
+
+            color: #526e57;
+            font-size: 9px;
+        }
+
+        .status {
+            margin-top: 20px;
+            color: #426048;
+            font-size: 9px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+
+            background: #39ff70;
+            border-radius: 50%;
+
+            margin-right: 6px;
+
+            box-shadow:
+                0 0 10px #39ff70;
+        }
+
+        @media(max-width:500px) {
+
+            .container {
+                padding: 15px;
+            }
+
+            .panel {
+                padding: 35px 20px;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="panel">
+
+            <div class="logo">
+                SSN<span>HUB</span>
+            </div>
+
+            <div class="subtitle">
+                SECURE TEST ENVIRONMENT
+            </div>
+
+
+            <div class="terminal">
+
+                <div>
+                    <span class="green">root@ssnhub</span>:~$ system_status
+                </div>
+
+                <div>
+                    SYSTEM:
+                    <span class="green">ONLINE</span>
+                </div>
+
+                <div>
+                    MODE:
+                    <span class="green">DEMO</span>
+                </div>
+
+                <div>
+                    DATABASE:
+                    <span class="green">TEST DATA</span>
+                </div>
+
+                <div>
+                    _
+                </div>
+
+            </div>
+
+
+            <div class="buttons">
+
+                <a href="login.html">
+                    &gt; LOGIN
+                </a>
+
+                <a href="signup.html">
+                    &gt; SIGN UP
+                </a>
+
+            </div>
+
+
+            <div class="notice">
+                DEMO ONLY — FICTIONAL TEST DATA.
+                NO REAL PERSONAL INFORMATION IS USED.
+            </div>
+
+
+            <div class="status">
+                <span class="dot"></span>
+                SYSTEM OPERATIONAL
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
