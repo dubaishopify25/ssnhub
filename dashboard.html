@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSN HUB — Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #030704;
+            color: #d8ffe0;
+            font-family: "Courier New", monospace;
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 230px;
+            padding: 25px 15px;
+            background: #050a06;
+            border-right: 1px solid #173d1d;
+        }
+
+        .logo {
+            color: #39ff70;
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 0 0 12px rgba(57,255,112,.5);
+        }
+
+        .logo span {
+            color: #d8ffe0;
+        }
+
+        .logo small {
+            display: block;
+            margin-top: 5px;
+            color: #49664f;
+            font-size: 8px;
+        }
+
+        nav {
+            margin-top: 35px;
+        }
+
+        nav a {
+            display: block;
+            padding: 14px;
+            margin: 5px 0;
+            color: #64836b;
+            text-decoration: none;
+            border: 1px solid transparent;
+            font-size: 11px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #39ff70;
+            background: #071409;
+            border-color: #174d22;
+        }
+
+        main {
+            margin-left: 230px;
+            padding: 28px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 23px;
+        }
+
+        .sub {
+            margin-top: 7px;
+            color: #55745c;
+            font-size: 9px;
+        }
+
+        .wallet {
+            padding: 10px 15px;
+            background: #071008;
+            border: 1px solid #173d1d;
+        }
+
+        .wallet small {
+            display: block;
+            color: #55745c;
+            font-size: 8px;
+        }
+
+        .wallet strong {
+            color: #39ff70;
+            font-size: 16px;
+        }
+
+        .terminal {
+            margin: 22px 0;
+            padding: 14px;
+            background: #050a06;
+            border: 1px solid #173d1d;
+            color: #55745c;
+            font-size: 9px;
+        }
+
+        .green {
+            color: #39ff70;
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr auto;
+            gap: 8px;
+            padding: 16px;
+            background: #071008;
+            border: 1px solid #173d1d;
+        }
+
+        input,
+        select {
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            background: #030704;
+            border: 1px solid #183b1d;
+            color: #d8ffe0;
+            font-family: inherit;
+            outline: none;
+        }
+
+        button {
+            height: 40px;
+            padding: 0 15px;
+            background: #071409;
+            border: 1px solid #287337;
+            color: #39ff70;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        button:hover {
+            border-color: #39ff70;
+            box-shadow: 0 0 12px rgba(57,255,112,.12);
+        }
+
+        .table-box {
+            margin-top: 18px;
+            overflow-x: auto;
+            background: #071008;
+            border: 1px solid #173d1d;
+        }
+
+        .table-title {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #173d1d;
+        }
+
+        .table-title h2 {
+            margin: 0;
+            font-size: 11px;
+        }
+
+        .table-title span {
+            color: #39ff70;
+            font-size: 8px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+        }
+
+        th {
+            padding: 13px;
+            text-align: left;
+            color: #527057;
+            font-size: 8px;
+        }
+
+        td {
+            padding: 14px 13px;
+            border-top: 1px solid #102714;
+            color: #9aba9f;
+            font-size: 9px;
+        }
+
+        td:first-child {
+            color: #39ff70;
+        }
+
+        @media(max-width:850px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                border-right: 0;
+                border-bottom: 1px solid #173d1d;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 18px;
+            }
+
+            .filters {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width:550px) {
+
+            .filters {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            SSN<span>HUB</span>
+            <small>TEST ENVIRONMENT</small>
+        </div>
+
+        <nav>
+
+            <a class="active" href="dashboard.html">
+                ▣ Dashboard
+            </a>
+
+            <a href="dashboard.html">
+                ▣ Test Records
+            </a>
+
+            <a href="#">
+                $ Wallet
+            </a>
+
+            <a href="history.html">
+                ◷ History
+            </a>
+
+            <a href="#">
+                ⚙ Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>&gt; Dashboard</h1>
+
+                <div class="sub">
+                    FICTIONAL TEST-DATA ENVIRONMENT
+                </div>
+            </div>
+
+            <div class="wallet">
+
+                <small>WALLET</small>
+
+                <strong>
+                    $250.00
+                </strong>
+
+            </div>
+
+        </header>
+
+
+        <div class="terminal">
+
+            <span class="green">
+                root@ssnhub
+            </span>:~$ system_status
+
+            &nbsp;&nbsp;
+
+            STATUS:
+            <span class="green">ONLINE</span>
+
+            &nbsp;&nbsp;
+
+            MODE:
+            <span class="green">DEMO</span>
+
+        </div>
+
+
+        <section class="filters">
+
+            <input
+                type="text"
+                placeholder="First Name">
+
+            <input
+                type="text"
+                placeholder="City">
+
+            <select>
+
+                <option>All States</option>
+                <option>TEST-A</option>
+                <option>TEST-B</option>
+                <option>TEST-C</option>
+
+            </select>
+
+            <input
+                type="text"
+                placeholder="DOB — XX-XX-2001">
+
+            <button
+                onclick="demoSearch()">
+
+                RUN SEARCH
+
+            </button>
+
+        </section>
+
+
+        <section class="table-box">
+
+            <div class="table-title">
+
+                <h2>
+                    &gt; AVAILABLE TEST RECORDS
+                </h2>
+
+                <span>
+                    DEMO ONLY
+                </span>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>TEST ID</th>
+                        <th>FIRST NAME</th>
+                        <th>CITY</th>
+                        <th>STATE</th>
+                        <th>DOB</th>
+                        <th>ACTION</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+                        <td>TEST-001</td>
+                        <td>Alex</td>
+                        <td>Sample City</td>
+                        <td>TEST-A</td>
+                        <td>**-**-2001</td>
+                        <td>
+                            <button onclick="demoSelect()">
+                                SELECT
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>TEST-002</td>
+                        <td>Jordan</td>
+                        <td>Demo City</td>
+                        <td>TEST-B</td>
+                        <td>**-**-1999</td>
+                        <td>
+                            <button onclick="demoSelect()">
+                                SELECT
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>TEST-003</td>
+                        <td>Taylor</td>
+                        <td>Example City</td>
+                        <td>TEST-C</td>
+                        <td>**-**-2003</td>
+                        <td>
+                            <button onclick="demoSelect()">
+                                SELECT
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function demoSearch() {
+            alert("Demo search — fictional test data only.");
+        }
+
+        function demoSelect() {
+            alert("Demo selection only.");
+        }
+
+    </script>
+
+</body>
+</html>
